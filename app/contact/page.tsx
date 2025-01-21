@@ -104,11 +104,11 @@ const Contact = () => {
                 {/* Image Section */}
                 <div className="mt-16 flex justify-center">
                     <Image
-                        src="/images/contact-image.jpg"
+                        src="/contactcover.png"
                         alt="Contact Image"
                         width={800}
                         height={400}
-                        className="w-full h-auto object-cover rounded-md"
+                        className="rounded-md"
                     />
                 </div>
 
