@@ -42,5 +42,5 @@ To get started with this project locally, follow these steps:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YourUsername/PortfolioWebsite.git
+git clone https://github.com/HasnathAhmedTamim/portfolio-landingpage_nextjs_2025.git
 
