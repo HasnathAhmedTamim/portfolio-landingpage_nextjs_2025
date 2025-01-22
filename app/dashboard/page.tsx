@@ -26,14 +26,20 @@ const Dashboard = () => {
     const [isEditing, setIsEditing] = useState(false);
     const [editingIndex, setEditingIndex] = useState<number | null>(null);
 
-    // Fetch initial data
+    // // Fetch initial data
+    // useEffect(() => {
+    //     fetch('/data.json')
+    //         .then((response) => response.json())
+    //         .then((data) => setProjects(data))
+    //         .catch((error) => console.error('Error fetching project data:', error));
+    // }, []);
     useEffect(() => {
-        fetch('/data.json')
+        fetch('/api/projects')
             .then((response) => response.json())
             .then((data) => setProjects(data))
             .catch((error) => console.error('Error fetching project data:', error));
     }, []);
-
+    
     // Handle adding new project
     const handleAddProject = () => {
         setProjects([...projects, newProject]);

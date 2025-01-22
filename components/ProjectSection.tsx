@@ -16,10 +16,23 @@ interface Project {
 const ProjectSection = () => {
     const [projects, setProjects] = useState<Project[]>([]);
 
+    // useEffect(() => {
+    //     const fetchProjects = async () => {
+    //         try {
+    //             const response = await fetch('/data.json');
+    //             const data = await response.json();
+    //             setProjects(data);
+    //         } catch (error) {
+    //             console.error('Error fetching project data:', error);
+    //         }
+    //     };
+
+    //     fetchProjects();
+    // }, []);
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await fetch('/data.json');
+                const response = await fetch('/api/projects');
                 const data = await response.json();
                 setProjects(data);
             } catch (error) {
@@ -29,6 +42,7 @@ const ProjectSection = () => {
 
         fetchProjects();
     }, []);
+
 
     return (
         <section className="py-20 text-gray-200">
@@ -43,7 +57,7 @@ const ProjectSection = () => {
 
             {/* 2 Rows and 2 Columns Grid */}
             <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mt-16">
-                {projects.map((project, index) => (
+                {projects.slice(0, 4).map((project, index) => (
                     <Link key={index} href={project.href}>
                         <div className="rounded-lg overflow-hidden flex flex-col justify-between bg-gray-800 hover:bg-gray-700 transition-all cursor-pointer">
                             <div className="relative w-full h-80">
