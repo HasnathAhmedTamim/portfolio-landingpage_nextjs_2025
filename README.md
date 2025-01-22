@@ -28,7 +28,7 @@ This portfolio site is designed to highlight various projects and works, offerin
 - **Next.js**: A React framework that enables server-side rendering, static site generation, and dynamic routing.
 - **TypeScript**: TypeScript provides static typing, which helps in making the codebase more reliable and maintainable.
 - **Tailwind CSS**: A utility-first CSS framework used to style the project.
-- **React**: React is used to build the interactive and dynamic user interface.
+
 
 ## Setup Instructions
 
