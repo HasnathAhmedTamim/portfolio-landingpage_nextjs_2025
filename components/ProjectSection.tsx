@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 // Define the project type
 interface Project {
@@ -12,47 +13,28 @@ interface Project {
     work: string;
 }
 
-const projects: Project[] = [
-    {
-        href: "/project/brand-journey-improvements",
-        imageSrc: "/p1.png",
-        alt: "Brand Journey Improvements",
-        title: "Brand Journey Improvements",
-        client: "Organo",
-        work: "Branding, Logo Design",
-    },
-    {
-        href: "/project/brand-grouping",
-        imageSrc: "/p2.png",
-        alt: "Brand Grouping",
-        title: "Brand Grouping",
-        client: "FR",
-        work: "Branding, Logo Design",
-    },
-    {
-        href: "/project/website-redesign",
-        imageSrc: "/p3.png",
-        alt: "Website Redesign",
-        title: "Website Redesign",
-        client: "XYZ Corp",
-        work: "Website Design, User Experience",
-    },
-    {
-        href: "/project/product-branding",
-        imageSrc: "/p4.png",
-        alt: "Product Branding",
-        title: "Product Branding",
-        client: "Acme Co",
-        work: "Product Packaging, Logo Design",
-    },
-];
-
 const ProjectSection = () => {
+    const [projects, setProjects] = useState<Project[]>([]);
+
+    useEffect(() => {
+        const fetchProjects = async () => {
+            try {
+                const response = await fetch('/data.json');
+                const data = await response.json();
+                setProjects(data);
+            } catch (error) {
+                console.error('Error fetching project data:', error);
+            }
+        };
+
+        fetchProjects();
+    }, []);
+
     return (
         <section className="py-20 text-gray-200">
             <div className="container mx-auto text-center">
                 <h2 className="text-3xl font-bold mb-8">My Projects Highlight</h2>
-                <Link href="/works">
+                <Link href="/dashboard">
                     <button className="bg-[#1a1a1a] hover:bg-[#1a1a1a] border-[2px] border-[#FF9142] text-white px-6 py-3 rounded-full">
                         Explore Works <span className="ml-2 bg-[#1a1a1a]">→</span>
                     </button>

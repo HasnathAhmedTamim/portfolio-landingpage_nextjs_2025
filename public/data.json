@@ -1,0 +1,50 @@
+[
+  {
+    "href": "/project/brand-journey-improvements",
+    "imageSrc": "/p1.png",
+    "alt": "Brand Journey Improvements",
+    "title": "Brand Journey Improvements",
+    "client": "Organo",
+    "work": "Branding, Logo Design"
+  },
+  {
+    "href": "/project/brand-grouping",
+    "imageSrc": "/p2.png",
+    "alt": "Brand Grouping",
+    "title": "Brand Grouping",
+    "client": "FR",
+    "work": "Branding, Logo Design"
+  },
+  {
+    "href": "/project/website-redesign",
+    "imageSrc": "/p3.png",
+    "alt": "Website Redesign",
+    "title": "Website Redesign",
+    "client": "XYZ Corp",
+    "work": "Website Design, User Experience"
+  },
+  {
+    "href": "/project/product-branding",
+    "imageSrc": "/p4.png",
+    "alt": "Product Branding",
+    "title": "Product Branding",
+    "client": "Acme Co",
+    "work": "Product Packaging, Logo Design"
+  },
+  {
+    "href": "/project/mobile-app-development",
+    "imageSrc": "/lp3.png",
+    "alt": "Mobile App Development",
+    "title": "Mobile App Development",
+    "client": "TechNova",
+    "work": "Mobile App Design, UI/UX"
+  },
+  {
+    "href": "/project/e-commerce-platform",
+    "imageSrc": "/lp2.png",
+    "alt": "E-commerce Platform",
+    "title": "E-commerce Platform",
+    "client": "ShopEase",
+    "work": "E-commerce Design, Website Development"
+  }
+]
